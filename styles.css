@@ -145,6 +145,7 @@ nav ul {
     font-size: 36px;
     margin-bottom: 20px;
     padding: 20px 0;
+    background: #262527;
     border-bottom: 1px solid #333;
 }
 
@@ -339,6 +340,11 @@ nav ul {
     }
 }
 
+.about {
+    padding: 30px 0;
+    background-color: #262527;
+}
+
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -469,7 +475,7 @@ nav ul {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background: #222;
+    background: #262527;
 }
 
 .contact-content {
@@ -806,4 +812,80 @@ nav ul {
         padding: 8px 15px;
         font-size: 14px;
     }
+}
+
+/* Resume button styles with proper alignment */
+.resume-button-container {
+    margin-left: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Make sure the nav elements are aligned */
+nav ul {
+    align-items: center;
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #12c6f3 !important;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border: 2px solid #12c6f3;
+    height: 20px; /* Fixed height to match other nav items */
+    box-sizing: content-box;
+}
+
+.resume-button:hover {
+    background-color: #12c6f3;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(18, 198, 243, 0.3);
+}
+
+.resume-text {
+    margin-right: 8px;
+}
+
+.download-icon {
+    display: flex;
+    align-items: center;
+}
+
+.resume-button:hover .download-icon {
+    animation: bounce 0.75s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(3px); }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .resume-button-container {
+        margin: 15px 0 5px 0;
+    }
+    
+    .resume-button {
+        padding: 8px 16px;
+    }
+}
+
+.gradient-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px; /* Increased height for a more gradual fade */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.45) 40%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none; /* So it doesn't interfere with clicks */
+    z-index: 1; /* Make sure it's above other elements but below social icons */
 }
