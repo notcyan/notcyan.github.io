@@ -20,7 +20,7 @@
                 <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li class="resume-button-container">
-                    <a href="resume/Corey_Horne_Resume.pdf" class="resume-button" download>
+                    <a href="https://drive.google.com/file/d/1BDQ59-7s7TtPEMbkh9SpVxIb4oCjtdrA/view?usp=sharing" class="resume-button" target="_blank">
                         <span class="resume-text">RESUME</span>
                         <span class="download-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -40,7 +40,7 @@
         <!-- Background video - YouTube version -->
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; pointer-events: none;">
             <iframe id="background-video"
-                src="https://www.youtube.com/embed/BHZRSMKzvdc?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=BHZRSMKzvdc"
+                src="https://www.youtube.com/embed/LvpOGv8ILHQ?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=LvpOGv8ILHQ"
                 style="position: absolute; top: 50%; left: 50%; width: 100%; height: 200vh; min-width: 200vh; transform: translate(-50%, -50%);"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -548,49 +548,49 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    const aboutSection = document.getElementById('about');
-    
-    // Fade out the indicator gradually as you scroll down
-    window.addEventListener('scroll', function() {
-        // Calculate how far down the viewport height we've scrolled (as a percentage)
-        const scrollPercentage = Math.min(window.scrollY / (window.innerHeight * 0.3), 1);
-        
-        // Apply an opacity value that decreases as scrollPercentage increases
-        scrollIndicator.style.opacity = (1 - scrollPercentage).toString();
-        
-        // Hide it completely when fully faded out (for better performance)
-        if (scrollPercentage === 1) {
-            scrollIndicator.style.visibility = 'hidden';
-        } else {
-            scrollIndicator.style.visibility = 'visible';
-        }
-    });
-    
-    // Enhanced smooth scrolling to the about section when clicked
-    if (scrollIndicator && aboutSection) {
-        scrollIndicator.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default behavior
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            const aboutSection = document.getElementById('about');
             
-            // Get the target position (the about section's top position)
-            const targetPosition = aboutSection.getBoundingClientRect().top + window.pageYOffset;
-            
-            // Scroll smoothly to the target position
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
+            // Fade out the indicator gradually as you scroll down
+            window.addEventListener('scroll', function() {
+                // Calculate how far down the viewport height we've scrolled (as a percentage)
+                const scrollPercentage = Math.min(window.scrollY / (window.innerHeight * 0.3), 1);
+                
+                // Apply an opacity value that decreases as scrollPercentage increases
+                scrollIndicator.style.opacity = (1 - scrollPercentage).toString();
+                
+                // Hide it completely when fully faded out (for better performance)
+                if (scrollPercentage === 1) {
+                    scrollIndicator.style.visibility = 'hidden';
+                } else {
+                    scrollIndicator.style.visibility = 'visible';
+                }
             });
             
-            // Add a visual flash to the about section when it's reached (optional)
-            setTimeout(() => {
-                aboutSection.classList.add('section-highlight');
-                setTimeout(() => {
-                    aboutSection.classList.remove('section-highlight');
-                }, 1000);
-            }, 800); // Delay to match scrolling time
+            // Enhanced smooth scrolling to the about section when clicked
+            if (scrollIndicator && aboutSection) {
+                scrollIndicator.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default behavior
+                    
+                    // Get the target position (the about section's top position)
+                    const targetPosition = aboutSection.getBoundingClientRect().top + window.pageYOffset;
+                    
+                    // Scroll smoothly to the target position
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Add a visual flash to the about section when it's reached (optional)
+                    setTimeout(() => {
+                        aboutSection.classList.add('section-highlight');
+                        setTimeout(() => {
+                            aboutSection.classList.remove('section-highlight');
+                        }, 1000);
+                    }, 800); // Delay to match scrolling time
+                });
+            }
         });
-    }
-});
     </script>
 
 </body>
