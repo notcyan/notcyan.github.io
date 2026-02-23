@@ -501,10 +501,6 @@ nav ul {
     transition: transform 0.3s;
 }
 
-.about-image img:hover {
-    transform: scale(1.02);
-}
-
 .about-text {
     flex: 2;
     min-width: 300px;
@@ -711,7 +707,7 @@ nav ul {
 
 .contact-method:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px #12c6f3;
+    box-shadow: 0 0 7px white;
 }
 
 .contact-icon {
@@ -733,10 +729,6 @@ nav ul {
     color: #f8fbf4;
     text-decoration: none;
     transition: color 0.3s;
-}
-
-.contact-details a:hover {
-    color: #12c6f3;
 }
 
 @media (max-width: 768px) {
@@ -839,7 +831,6 @@ nav ul {
 }
 
 .social-icons-footer a:hover {
-    background: #f8fbf4;
     transform: translateY(-3px);
 }
 
